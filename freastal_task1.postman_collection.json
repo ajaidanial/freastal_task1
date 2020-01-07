@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "70e6596a-6675-49df-afc1-64a5af2da48c",
+		"name": "freastal_task1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/students/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get student by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/students/1/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"students",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ajai Danial\",\n    \"age\": 12,\n    \"standard\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/students/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete student by id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ajai Danial\",\n    \"age\": 12,\n    \"standard\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/students/1/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"students",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
