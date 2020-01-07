@@ -1,5 +1,11 @@
-from django.http import HttpResponse
+from rest_framework import viewsets
+
+from main_app.models import Student
+from main_app.serializers import StudentSerializer
 
 
-def index(r):
-    return HttpResponse("hello world")
+class StudentViewSet(viewsets.ModelViewSet):
+    """ViewSet for Student model."""
+
+    serializer_class = StudentSerializer
+    queryset = Student.objects.all()
